@@ -1,0 +1,245 @@
+/*главная*/
+.main_content .block {
+    width: 70%;
+    margin: 100px auto 10px auto;
+    display: flex;
+    flex-direction: row;
+}
+.main_content .logomain img {
+    max-width: 400px;
+}
+
+.main_content .block .line img{
+    height: 100%;
+    width: 5px;
+}
+.main_content .block .line{
+    width: 10%;
+}
+
+.main_content .block h1{
+    font-size: 50px;
+    color: #fff;
+}
+.main_content .block .main_text1{
+    color: #848D97;
+    font-size: 30px;
+    margin-left: 50px;
+}
+.main_content .block .main_text2{
+    color: #848D97;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    margin: 30px;
+    max-width: 1000px;
+    align-items: center;
+}
+
+.main_content .block .main_text2 img{
+    width: 70px;
+    height: 70px;
+    margin: 20px;
+}
+
+.main_content .main_text3 {
+    position: absolute;
+    bottom: 350px;
+    right: 100px;
+    font-size: 50px;
+    color: white;
+    transform: rotate(-15deg);
+}
+
+.main_content .main_text4 {
+    position: absolute;
+    bottom: 250px;
+    right: 70px;
+    font-size: 40px;
+    color: white;
+    transform: rotate(10deg);
+}
+
+.main_content .main_text5 {
+    position: absolute;
+    bottom: 470px;
+    right: 65px;
+    font-size: 60px;
+    color: white;
+    transform: rotate(7deg);
+}
+
+/*регистрация авторизация*/
+.form-container {
+    width: 400px;
+    margin: 100px auto;
+    padding: 20px 25px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    font-size: 18px;
+}
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.form-container input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+.flash {
+    background-color: #fff;
+    width: 400px;
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+/*Параметры генерации*/
+.main_content .gener_param_block {
+    margin: 200px auto 0 auto;
+    width: 40%;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+}
+.main_content .gener_param_block .title{
+    background: repeating-linear-gradient(-60deg, #555 0, #555 1px, transparent 1px, transparent 5px);
+    color: #fff;
+    text-align:center;
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+.main_content .gener_param_block form{
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    text-align:center;
+}
+.main_content .gener_param_block form h3{
+    padding-bottom: 15px;
+    color: #3498db;
+}
+
+.main_content .gener_param_block form .gener, .save{
+    width: 50%;
+}
+.main_content .gener_param_block .custom-select {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin: 5px;
+    width: 70%;
+}
+
+
+.main_content .gener_param_block .button{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 15px 0 30px 0;
+    width: 70%;
+}
+.main_content .gener_param_block .button input{
+    border: none;
+
+}
+
+.main_content .gener_param_block .button:hover {
+    background-color: #2980b9;
+}
+
+/*Отображение задачи*/
+.main_content .rend_block{
+    display: flex;
+    margin-top: 40px;
+    dlex-direction: row;
+    justify-content: center;
+}
+
+.main_content .rend {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+    margin-right: 40px;
+    border-radius: 20px;
+}
+.main_content .rend h3{
+    color: #3498db;
+}
+
+.main_content .rend .task-block {
+    background: #fff;
+    padding: 20px;
+}
+
+.main_content .rend .title{
+    background: repeating-linear-gradient(-60deg, #555 0, #555 1px, transparent 1px, transparent 5px);
+    color: #fff;
+    text-align:center;
+    padding: 20px 0 5px 0;
+    font-size: 20px;
+}
+
+.main_content .rend button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    width: 70%;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 15px 100px 15px 0px;
+    border: white;
+    font-size: 18px;
+}
+
+
+.main_content .canvas canvas {
+	border: 3px solid antiquewhite;
+	background-color: antiquewhite;
+	border-radius: 5px;
+}
+
+
+.main_content .canvas {
+    width: 800px;
+    height:800px;
+}
+
+
+
+@media screen and (min-width: 800px) {
+
+}

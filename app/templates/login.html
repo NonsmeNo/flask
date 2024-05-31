@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}
+Авторизация
+{% endblock %}
+{% block myhead %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="form-container">
+    <form action="/login" method="post" class="">
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <div>
+            <input type="submit" value="Войти"/>
+        </div>
+        <br>
+        <div>
+            У Вас еще нет аккаунта? <a href="{{ url_for('register') }}">Зарегистрироваться</a>
+        </div>
+    </form>
+</div>
+<div>
+    {% for msg in get_flashed_messages(True) %}
+    <div class="flash">{{msg}}</div>
+{% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+new_theme = Themes(name='Линейные уравнения')
+db.session.add(new_theme)
+new_theme = Themes(name='Квадратные уравнения')
+db.session.add(new_theme)
+new_theme = Themes(name='Тригонометрические уравнения')
+db.session.add(new_theme)
+db.session.commit()
+
+
+
+
+<option value="1">a*x+b=c</option>
+<option value="2">a*x=b</option>
+<option value="3">a*(x-b)=c</option>
+new_template = Templates(template='$@*x$@=$@', template_SHOW="a*x+b=c", theme_id=1)
+db.session.add(new_template)
+new_template = Templates(template='$@*x=$@', template_SHOW="a*x=b", theme_id=1)
+db.session.add(new_template)
+new_template = Templates(template='$@*(x$@)=$@', template_SHOW="a*(x-b)=c", theme_id=1)
+db.session.add(new_template)
+new_template = Templates(template='$@*x^2$@*x$@=0', template_SHOW="a*x^2+bx+c=0", theme_id=2)
+db.session.add(new_template)
+new_template = Templates(template='$@*x^2$@*x=0', template_SHOW="a*x^2+bx=0", theme_id=2)
+db.session.add(new_template)
+new_template = Templates(template='$@*sin(x)$@=$@', template_SHOW="asin(x)+b=c", theme_id=3)
+db.session.add(new_template)
+new_template = Templates(template='$@*cos(x)$@=$@', template_SHOW="acos(x)+b=c", theme_id=3)
+db.session.add(new_template)
+db.session.commit()
+
+new_task = Tasks(task_text='Решите линейное уравнение: ', theme_id=1)
+db.session.add(new_task)
+new_task = Tasks(task_text='Решите квадратное уравнение: ', theme_id=2)
+db.session.add(new_task)
+new_task = Tasks(task_text='Решите тригонометрическое уравнение: ', theme_id=3)
+db.session.add(new_task)
+db.session.commit()
+
+db.session.query(Themes).delete()
+db.session.commit()
+
+db.session.query(SavedTasks).delete()
+db.session.query(Templates).delete()
+db.session.commit()
+
+db.session.query(Templates).filter(Templates.id==6).delete()
+db.session.commit()
